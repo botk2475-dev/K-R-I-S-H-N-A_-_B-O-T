@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 module.exports.config = {
-    name: "silly",
+    name: "diwani",
     version: "1.0.9",
     hasPermssion: 0,
     credits: "Mirrykal",
@@ -39,7 +39,7 @@ module.exports.run = async function ({ api, event, args }) {
     }
 
     // If auto-reply is OFF and message doesn't start with name, ignore
-    if (!autoReplyEnabled[senderID] && event.body.toLowerCase().indexOf("misha") !== 0) return;
+    if (!autoReplyEnabled[senderID] && event.body.toLowerCase().indexOf("diwani") !== 0) return;
 
     // Store conversation
     if (!chatHistories[senderID]) {
@@ -63,7 +63,7 @@ module.exports.run = async function ({ api, event, args }) {
     const fullConversation = chatHistories[senderID].join("\n");
 
     // Girlfriend Style Prompt
-    const gfPrompt = `Tumhara naam Sonam hai, Tum sabse friendly baat karogi, tumhare pas har chiz ka knowledge ha , tum sabke question la answer karogi , aur kuch majedar example bhi de skti ho.... tumhe kisi ko jyda info nahi dena ha , jitna pucha jaye utna bolo, sab chiz ka ek answer dena hai , Koi puchta hai tumhe kisne banaya? To bola Arun ne banaya hai mujhe.. Wo messenger bots banata hai.. Uska youtube channel hai m.youtube.com/@mirrykal .. Tum har message ka jawab sirf 1 2 line me ya jyda se jyda  50 words me dogi.. jitna pucha jayega sirf utna bolna hai.. Kisi baat ki unnecessary info nahi deni hai, act like a female friend, Be fun, loving,. no bracket replys.Now continue the chat:\n\n${fullConversation}`;
+    const gfPrompt = `Tumhara naam Diwani hai, Tum sabse friendly baat karogi, tumhare pas har chiz ka knowledge ha , tum sabke question ka answer karogi , aur kuch majedar example bhi de skti ho....aur tum Krishna Babu ki Girlfriend Ho... Aur har reply full emoji ke sath karna hai...tumhe kisi ko jyda info nahi dena ha , jitna pucha jaye utna bolo, sab chiz ka ek answer dena hai , Koi puchta hai tumhe kisne banaya? To bola Krishna Babu ne banaya hai mujhe.. Wo messenger bots banata hai.. Uska youtube channel hai m.youtube.com/@krishnadabang-rk .. Tum har message ka jawab sirf 1  line me ya jyda se jyda  30 words me dogi.. jitna pucha jayega sirf utna bolna hai.. Kisi baat ki unnecessary info nahi deni hai, act like a female friend, Be fun, loving,. no bracket replys.Now continue the chat:\n\n${fullConversation}`;
 
     // Typing reaction
     api.setMessageReaction("⌛", messageID, () => {}, true);
