@@ -26,7 +26,7 @@ const time = process.uptime() ,
     var y_1 = (seconds < 10) ? '0' + seconds : seconds;
   const { commands } = global.client;
   const moment = require("moment-timezone");
-  const timeNow = moment.tz("Asia/Manila").format("DD/MM/YYYY || HH:mm:s");
+  const timeNow = moment.tz("Asia/kolkata").format("DD/MM/YYYY || HH:mm:s");
     const axios = require('axios')
 	const pidusage = await global.nodemodule["pidusage"](process.pid);
 	const timeStart = Date.now();
@@ -71,7 +71,7 @@ const time = process.uptime() ,
   } else {
     var id = k
   }
-  const loz = ["https://i.imgur.com/9jbBPIM.jpg","https://i.imgur.com/cPvDTd9.jpg","https://i.imgur.com/ZT8CgR1.jpg","https://i.imgur.com/WhOaTx7.jpg","https://i.imgur.com/BIcgJOA.jpg","https://i.imgur.com/EcJt1yq.jpg","https://i.imgur.com/0dtnQ2m.jpg"]
+  const loz = ["https://i.postimg.cc/Zntqs28m/9jbBPIM.jpg","https://i.postimg.cc/9Fcm4G1L/cPvDTd9.jpg","https://i.postimg.cc/Zntqs28m/9jbBPIM.jpg","https://i.postimg.cc/9Fcm4G1L/cPvDTd9.jpg","https://i.postimg.cc/Zntqs28m/9jbBPIM.jpg","https://i.postimg.cc/9Fcm4G1L/cPvDTd9.jpg","https://i.postimg.cc/Zntqs28m/9jbBPIM.jpg"]
     const lengthchar = (await axios.get('https://raw.githubusercontent.com/mraikero-01/saikidesu_data/main/imgs_data2.json')).data
     console.log(lengthchar.length)
   const Canvas = require('canvas');
@@ -130,7 +130,7 @@ registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
     const imageBuffer = canvas.toBuffer();
    fs.writeFileSync(pathImg, imageBuffer);
   return api.sendMessage({
-    body: `┃======{ 𝗨𝗣𝗧𝗜𝗠𝗘 𝗥𝗢𝗕𝗢𝗧 }======┃\n\n→ Bot worked  ${hours} hours ${minutes} minutes ${seconds} seconds \n•━━━━━━━━━━━━━━━━━━━━━━━━•\n➠ 𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭\n➠ Bo𝐭 Name: ${global.config.BOTNAME}\n➠ Bot Prefix: ${global.config.PREFIX}\n➠ Commands count: ${commands.size}\n➠ Total Users: ${global.data.allUserID.length}\n➠ Total thread: ${global.data.allThreadID.length}\n➠ CPU in use:: ${pidusage.cpu.toFixed(1)}%\n➠ RAM: ${byte2mb(pidusage.memory)}\n➠ Ping: ${Date.now() - timeStart}ms\n➠ Character ID𝐭: ${id}\n•━━━━━━━━━━━━━━━━━━━━━━━━•\n[ ${timeNow} ]`,
+    body: `┃======{ 𝗨𝗣𝗧𝗜𝗠𝗘 𝗥𝗢𝗕𝗢𝗧 }======┃\n\n→ Bot worked  ${hours} hours ${minutes} minutes ${seconds} seconds \n•━━━━━━━━━━━━━━━━━━━━━━━━•\n➠ 𝗞𝗥𝗜𝗦𝗛𝗡𝗔 𝗕𝗔𝗕𝗨\n➠ Bo𝐭 Name: ${global.config.BOTNAME}\n➠ Bot Prefix: ${global.config.PREFIX}\n➠ Commands count: ${commands.size}\n➠ Total Users: ${global.data.allUserID.length}\n➠ Total thread: ${global.data.allThreadID.length}\n➠ CPU in use:: ${pidusage.cpu.toFixed(1)}%\n➠ RAM: ${byte2mb(pidusage.memory)}\n➠ Ping: ${Date.now() - timeStart}ms\n➠ Character ID𝐭: ${id}\n•━━━━━━━━━━━━━━━━━━━━━━━━•\n[ ${timeNow} ]`,
     attachment: fs.createReadStream(pathImg)
   },
     event.threadID,
