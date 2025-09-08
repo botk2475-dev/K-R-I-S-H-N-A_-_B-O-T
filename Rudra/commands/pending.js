@@ -22,7 +22,7 @@ module.exports.languages = {
     "en": {
         "invaildNumber": "%1 is not an invalid number",
         "cancelSuccess": "Refused %1 thread!",
-        "notiBox": "🆁︎🆄︎🅳︎🆁︎🅰︎ BoT Connected Successfully!\nUse +help2 for more info :>",
+        "notiBox": "𝗢𝗪𝗡𝗘𝗥 :- ꧁≛⃝💗꯭ꪸ  ⃪꯭̽ ㉿𝕣⃪꯭𝕚ຮ⃪꯭𝗵֟፝𝕟⃪꯭𝝰꯭ 🦚꯭≛⃝💖꧂ BoT Connected Successfully!\nUse +help2 for more info :>",
         "approveSuccess": "Approved successfully %1 threads!",
 
         "cantGetPendingList": "Can't get the pending list!",
