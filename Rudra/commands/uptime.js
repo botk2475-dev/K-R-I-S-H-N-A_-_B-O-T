@@ -121,9 +121,9 @@ registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
     });
     ctx.textAlign = "start";
     ctx.font = "45px time";
-    ctx.fillText("@" + "priyanshu.rajput.official", 250, 515)
-    ctx.fillText("@" + "pri_yanshu12", 250, 575)
-   //ctx.fillText("@" + "DVFB.VietLe.pro", 405, 750)
+    ctx.fillText("@" + "𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗕𝗔𝗕𝗨_𝗢𝗙𝗙𝗜𝗖𝗜𝗔𝗟", 250, 515)
+    ctx.fillText("@" + "𝐒𝐇𝐘𝐀𝐌_𝐃𝐈𝐖𝐀𝐍𝐈", 250, 575)
+    ctx.fillText("@" + "DVFB.VietLe.pro", 405, 750)
     ctx.restore();
     ctx.save();
     ctx.beginPath();
