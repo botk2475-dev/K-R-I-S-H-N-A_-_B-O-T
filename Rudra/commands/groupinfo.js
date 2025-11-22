@@ -1,13 +1,13 @@
 const fs = require("fs");
 const request = require("request");
 module.exports.config = {
-	name: "groupinfo",
+	name: "groupinf",
 	version: "1.0.0", 
 	hasPermssion: 1,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-	description: "View your box information",
-	commandCategory: "Box", 
-	usages: "groupinfo", 
+	credits: "KRISHNA BABU",
+	description: "THIS BOT WAS MADE BY MR KRISHNA BABU",
+	commandCategory: "GROUP INFORMETION", 
+	usages: "PREFIX", 
 	cooldowns: 0,
 	dependencies: [] 
 };
@@ -36,11 +36,11 @@ module.exports.run = async function({ api, event, args }) {
 	let threadName = threadInfo.threadName;
 	let id = threadInfo.threadID;
 	let sex = threadInfo.approvalMode;
-			var pd = sex == false ? 'Turned off' : sex == true ? 'Turned on' : 'Kh';
+			var pd = sex == false ? 'TURNED OFF' : sex == true ? 'TURNED ON' : 'NOTHING';
 			var callback = () =>
 				api.sendMessage(
 					{
-						body: `🔧 GC Name: ${threadName}\n🔧 Group ID: ${id}\n🔧 Approval: ${pd}\n🔧 Emoji: ${icon}\n🔧 Information: including ${threadMem} members\n🔧 Number of males: ${nam} members\n🔧 Number of females: ${nu} members\n🔧 With ${qtv} administrators\n🔧 Total number of messages: ${sl} msgs.\n\nMade with ❤️ by: 𝗞𝗥𝗜𝗦𝗛𝗡𝗔 🌸 𝗕𝗔𝗕𝗨`,
+						body: `🌺 𝗚𝗖-𝗡𝗔𝗠𝗘 𒁍 ${threadName}\n🌺 𝗚𝗖-𝗨𝗜𝗗 𒁍 ${id}\n🌺 𝗚𝗖 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 𒁍 ${pd}\n🌺 𝗚𝗖-𝗘𝗠𝗢𝗝𝗜 𒁍 ${icon}\n🌺 𝗧𝗢𝗧𝗔𝗟-𝗠𝗘𝗠𝗕𝗘𝗥 𒁍 ${threadMem}\n🌺 𝗧𝗢𝗧𝗔𝗥-𝗠𝗔𝗟𝗘 𒁍 ${nam}\n🌺 𝗧𝗢𝗧𝗔𝗟-𝗙𝗘𝗠𝗔𝗟𝗘 𒁍 ${nu}\n🌺𝗚𝗖-𝗔𝗗𝗠𝗜𝗡 𒁍 ${qtv}\n🌺 𝗧𝗢𝗧𝗔𝗟-𝗚𝗖-𝗠𝗘𝗦𝗦𝗘𝗚𝗘𝗦 𒁍 ${sl}\n\n════════════════════════ ❁\n𝗖𝗥𝗘𝗔𝗧𝗘𝗥 𝗕𝗬 𝗞𝗥𝗜𝗦𝗛𝗡𝗔-𝗕𝗔𝗕𝗨 🙂✌️`,
 						attachment: fs.createReadStream(__dirname + '/cache/1.png')
 					},
 					event.threadID,
@@ -50,4 +50,4 @@ module.exports.run = async function({ api, event, args }) {
 			return request(encodeURI(`${threadInfo.imageSrc}`))
 				.pipe(fs.createWriteStream(__dirname + '/cache/1.png'))
 				.on('close', () => callback());
-	    }
+}
