@@ -2,16 +2,16 @@ module.exports.config = {
 	name: "groupemoji",
 	version: "1.0.0", 
 	hasPermssion: 0,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-	description: "Change your group Emoji",
-	commandCategory: "Box", 
-	usages: "groupemoji [name]", 
+	credits: "KRISHNA BABU",
+	description: "THIS BOT WAS MADE BY MR KRISHNA BABU",
+	commandCategory: "CHANGE GROUP EMOJI", 
+	usages: "PREFIX", 
 	cooldowns: 0,
 	dependencies: [] 
 };
 
 module.exports.run = async function({ api, event, args }) {
 	var emoji = args.join(" ")
-	if (!emoji) api.sendMessage("You have not entered Emoji 💩💩", event.threadID, event.messageID)
-	else api.changeThreadEmoji(emoji, event.threadID, () => api.sendMessage(`🔨 The bot successfully changed Emoji to: ${emoji}`, event.threadID, event.messageID));
+	if (!emoji) api.sendMessage("BOSS SAATH ME EK EMOJI DALO JO LAGANA HA 😐✌️", event.threadID, event.messageID)
+	else api.changeThreadEmoji(emoji, event.threadID, () => api.sendMessage(`BOSS MAINE GROUP KA EMOJI BADAL DIYA 👉 ${emoji}\n━━━━━━━━━━━━━━━━━━━━━━━\nOWNER  𒁍 MR KRISHNA BABU 🌺`, event.threadID, event.messageID));
 }
