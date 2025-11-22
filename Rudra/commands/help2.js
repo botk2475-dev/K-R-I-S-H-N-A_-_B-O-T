@@ -64,10 +64,10 @@ module.exports. run = function({ api, event, args, getText }) {
     i = startSlice;
     const returnArray = arrayInfo.slice(startSlice, startSlice + numberOfOnePage);
 
-    for (let item of returnArray) msg += `𒁍  [${++i}] → ${prefix}${item} ♥️ \n`;
+    for (let item of returnArray) msg += `📂 [${++i}] → ${prefix}${item} 📝 \n`;
 
 
-    const siu = `┏━━━━━┓\n    KRISHNA-BABU                    ✧═══•❁😛❁•═══✧\n┗━━━━━┛\n\n✧═══❁♥️TOTAL COMMAND LIST ♥️❁═══✧`;
+    const siu = '┏━💌━━❀🩵🦋🫅🏻🦋🩵❀━━💌━┓\n     ꧁≛⃝💗꯭ꪸ  ⃪꯭̽ ㉿𝕣⃪꯭𝕚ຮ⃪꯭𝗵֟፝𝕟⃪꯭𝝰꯭ 🦚꯭≛⃝💖꧂\n\n✧═══❁♥️TOTAL COMMAND LIST ♥️❁═══✧`;
 
  const text = `📂[ ${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)} ]\n\nOR COMMAND KE LIYE HAI MENU TYPE KRO\nTHIS BOT IS MADE BYE MR KRISHNA BABU 🙂✌️\n\n❁ ═════ ❃KRISHNA-BABU❃ ═════ ❁`;
 
