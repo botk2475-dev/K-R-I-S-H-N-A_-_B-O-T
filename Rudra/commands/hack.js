@@ -56,7 +56,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   
   var background = [
 
-    "https://i.imghippo.com/files/qEl8678STs.png"
+    "https://i.ibb.co/C3nFmC1v/image.jpg"
 ];
   var rd = background[Math.floor(Math.random() * background.length)];
   
@@ -96,8 +96,8 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
-  return api.sendMessage({ body: ` `, attachment: fs.createReadStream(pathImg) },
+  return api.sendMessage({ body: `╭──────•◈•──────╮\n         𝐊𝐫𝐢𝐬𝐡𝐧𝐚 𝐁𝐚𝐛𝐮 𝐂𝐡𝐚𝐓 𝐁𝐨𝐓        \n\nYour Facebook ID is dead-🥵\nMeNe PaSSwoRD BoSS Krishna Ko De Diya H3-🥱🏃‍♂️🌻\n\n  BOT OWNER KR!5HN4 B4BU ッ \n╰──────•◈•───────╯`, attachment: fs.createReadStream(pathImg) },
       event.threadID,
       () => fs.unlinkSync(pathImg),
       event.messageID);
-    }
+}
