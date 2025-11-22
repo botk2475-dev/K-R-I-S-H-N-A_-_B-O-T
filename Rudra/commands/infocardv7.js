@@ -1,7 +1,7 @@
 const fonts = "/cache/Play-Bold.ttf"
 const downfonts = "https://drive.google.com/u/0/uc?id=1uni8AiYk7prdrC7hgAmezaGTMH5R8gW8&export=download" 
 module.exports.config = {
-  name: "cardinfo7",
+  name: "cardinfo",
   version: "2.0.0",
   hasPermssion: 0,
   credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
@@ -37,7 +37,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
     const res = await api.getUserInfoV2(uid);  
   let getAvatarOne = (await axios.get(`https://graph.facebook.com/${uid}/picture?height=1500&width=1500&access_token=1449557605494892|aaf0a865c8bafc314ced5b7f18f3caa6`, { responseType: 'arraybuffer' })).data;
   let bg = (
-    await axios.get(encodeURI(`https://i.imgur.com/rqbC4ES.jpg`), {
+    await axios.get(encodeURI(`https://i.postimg.cc/Vsr9JnGn/rqb-C4ES.jpg`), {
       responseType: "arraybuffer",
     })
   ).data;
