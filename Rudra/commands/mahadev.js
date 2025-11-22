@@ -1,49 +1,25 @@
-const axios = require("axios");
-const fs = require("fs-extra");
-const path = require("path");
-
+const fs = require("fs");
 module.exports.config = {
-  name: "mahadev",
-  version: "1.0.1",
-  hasPermssion: 0,
-  credits: "Rudra",
-  description: "Send Mahadev swag bhakti video",
-  commandCategory: "fun",
-  cooldowns: 2,
-  dependencies: {}
+	name: "har-har-mahadev",
+    version: "1.0.1",
+	hasPermssion: 0,
+	credits: "KRISHNA-BABU", 
+	description: "hihihihi",
+	commandCategory: "no prefix",
+	usages: "har-har-mahadev",
+    cooldowns: 5, 
 };
 
-module.exports.run = async function({ api, event }) {
-  const videoLinks = [
-    "https://i.imgur.com/DbzplKX.mp4",
-    "https://i.imgur.com/KUhRKEi.mp4",
-    "https://i.imgur.com/eQNdprV.mp4",
-    "https://i.imgur.com/FHzHB2T.mp4"
-  ];
+module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
+	var { threadID, messageID } = event;
+	if (event.body.indexOf("har har mahadev")==0 || event.body.indexOf("Har har mahadev")==0 || event.body.indexOf("Har Har mahadev")==0 || event.body.indexOf("Har Har Mahadev")==0 || event.body.indexOf("HAR HAR MAHADEV")==0 || event.body.indexOf("mahadev")==0 || event.body.indexOf("Mahadev")==0 || event.body.indexOf("MAHADEV")==0 || event.body.indexOf("🔱")==0) {
+		var msg = {
+				body: "░⃟❘꯭꯭❈꯭🔱꯭ 𝗛꯭𝝰፝֯֟‌𝐫꯭ 𖤓꯭ 𝗛꯭𝝰፝֯֟‌꯭𝗿꯭ 𖤓꯭ 𝝡꯭𝝰꯭𝗵‌֟֯፝𝝰꯭𝝳꯭𝞊‌꯭֟֯፝𝝼꯭ 🕉𝄄꯭❈꯭❘⃟꯭░꯭",
+			}
+			api.sendMessage( msg, threadID, messageID);
+    api.setMessageReaction("🔱", event.messageID, (err) => {}, true)
+		}
+	}
+	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
-  const bhaktiMessages = [
-    "🔱 Har Har Mahadev! Bhakti ka asli swag yahi hai!",
-    "🚩 Jai Bhole Baba! Rudra mode ON 🔥",
-    "🕉️ Shiv ka naam le, kaam sab theek ho jaega 💪",
-    "🙌 Bhakti bhi meri, swag bhi mera - Rudra ke saath!",
-    "⚡ Bam Bam Bhole! Trishul ki taal pe zindagi chalti hai!",
-    "🌪️ Om Namah Shivay! Rudra style me bhakti ka blast 💥"
-  ];
-
-  const selectedVideo = videoLinks[Math.floor(Math.random() * videoLinks.length)];
-  const selectedMessage = bhaktiMessages[Math.floor(Math.random() * bhaktiMessages.length)];
-  const tempPath = path.join(__dirname, "mahadev_temp.mp4");
-
-  try {
-    const res = await axios.get(selectedVideo, { responseType: "arraybuffer" });
-    fs.writeFileSync(tempPath, res.data);
-
-    api.sendMessage({
-      body: selectedMessage,
-      attachment: fs.createReadStream(tempPath)
-    }, event.threadID, () => fs.unlinkSync(tempPath));
-  } catch (err) {
-    console.error("❌ Mahadev video load fail:", err.message);
-    api.sendMessage("⚠️ Bhole Nath ka video bhejne me dikkat ho gayi bhai 🙏", event.threadID);
   }
-};
