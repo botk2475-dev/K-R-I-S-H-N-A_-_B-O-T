@@ -12,11 +12,11 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
-  if (event.body.indexOf("ADMIN")==0 || event.body.indexOf("Admin")==0 || event.body.indexOf("admin")==0 || event.body.indexOf("#admin")==0) {
+  if (event.body.indexOf("ADMIN")==0 || event.body.indexOf("Admin")==0 || event.body.indexOf("/Admin")==0 || event.body.indexOf("#admin")==0) {
     var msg = {
-        body: "🌸💖 𝗢𝘄𝗻𝗲𝗿 ➻ 𝚂𝙷𝚈𝙰𝙼 𝙳𝙸𝚆𝙰𝙽𝙸 🌸🍒\n✧═════════•❁❀❁•═════════✧\n😘🍒𝗖𝗥𝗘𝗔𝗧𝗘 ➻ 🇰‌🇷‌🇮‌🇸‌🇭‌🇳‌🇦‌😍😘🌸\n✧═════════•❁❀❁•═════════✧\n [➤]➜ 𝗙𝗕 𝗟𝗜𝗡𝗞 :- ☟ ☟ ☟\nhttps://www.facebook.com/profile.php?id=61573328623221\n✧═════════•❁❀❁•═════════✧",
+        body: "🫅 𝐎𝐖𝐍𝐄𝐑 𝐏𝐑𝐎𝐅𝐈𝐋𝐄 🫅",
         attachment: 
-fs.createReadStream(__dirname + `/RK/PROFILE.jpg`)
+fs.createReadStream(__dirname + `/KRISHNA-BABU/PROFILE.jpg`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🫅", event.messageID, (err) => {}, true)
