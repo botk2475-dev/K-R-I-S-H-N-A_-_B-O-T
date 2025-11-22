@@ -68,14 +68,14 @@ let juswa = ["KYA AAP NE KHANA KHA LIYA...? 😊", "KYA KAR RAHI HO MERI JAAN...
     let moment = require("moment-timezone");
     let hours = moment.tz('Asia/Kolkata').format('HHmm');
     let session = (
-    hours > 0001 && hours <= 400 ? "SWEET MORNING" : 
-    hours > 401 && hours <= 700 ? "LOVELY MORNING" :
-    hours > 701 && hours <= 1000 ? "BEAUTIFUL MORNING" :
-    hours > 1001 && hours <= 1100 ? "CUTE MORNING" : 
-    hours > 1100 && hours <= 1500 ? "AFTER NOON" : 
-    hours > 1501 && hours <= 1800 ? "EVENING" : 
-    hours > 1801 && hours <= 2100 ? "EVENING" : 
-    hours > 2101 && hours <= 2400 ? "NIGHT" : 
+    hours > 0001 && hours <= 400 ? "🌸 𝚂𝚆𝙴𝙴𝚃 𝙼𝙾𝚁𝙽𝙸𝙽𝙶 💖" : 
+    hours > 401 && hours <= 700 ? "🌸 𝙻𝙾𝚅𝙴𝚁𝚈 𝙼𝙾𝚁𝙽𝙸𝙽𝙶 💖" :
+    hours > 701 && hours <= 1000 ? "🌸 𝙱𝙴𝙰𝚄𝚃𝙸𝙵𝚄𝙻𝙻 𝙼𝙾𝚁𝙽𝙸𝙽𝙶 💖" :
+    hours > 1001 && hours <= 1100 ? "🌸 𝙲𝚄𝚃𝙴 𝙼𝙾𝚁𝙽𝙸𝙽𝙶 💖" : 
+    hours > 1100 && hours <= 1500 ? "🌸 𝙰𝙵𝚃𝙴𝚁𝙽𝙾𝙾𝙽 💖" : 
+    hours > 1501 && hours <= 1800 ? "🌸 𝙴𝚅𝙴𝙽𝙸𝙽𝙶 💖" : 
+    hours > 1801 && hours <= 2100 ? "🌸 𝙴𝚅𝙴𝙽𝙸𝙽𝙶 💖" : 
+    hours > 2101 && hours <= 2400 ? "🌸 𝙽𝙸𝙶𝙷𝚃 💖" : 
     "error");
     let name = await Users.getNameUser(event.senderID);
     let mentions = [];
@@ -83,7 +83,7 @@ let juswa = ["KYA AAP NE KHANA KHA LIYA...? 😊", "KYA KAR RAHI HO MERI JAAN...
       tag: name,
       id: event.senderID
     })
-    let msg = {body: `┏━━━━━┓\n     ༄𒁍≛⃝𝐊𝐑𝐈𝐒𝐇𝐍𝐀-𝐁𝐀𝐁𝐔🌸꯭꯭꯭꯭᭄❥                    ✧══•❁🐥❁•══✧\n┗━━━━━┛\n\nHELLO 𒁍 🌺${name}🌺\n\nHAVE A GOOD ${session}\n${juswa1}`, mentions}
+    let msg = {body: `┏━━━━━┓\n     ༄𒁍≛⃝𝐊𝐑𝐈𝐒𝐇𝐍𝐀-𝐁𝐀𝐁𝐔🌸꯭꯭꯭꯭᭄❥                    ✧══•❁🐥❁•══✧\n┗━━━━━┛\n\n 𝐇𝐄𝐋𝐋𝐎 𒁍 🌺${name}🌺\n\n 𝙷𝙰𝚅𝙴 𝙰 𝙶𝙾𝙾𝙳 ${session}\n❥────────────────────❥\n${juswa1}`, mentions}
     api.sendMessage(msg, event.threadID, (e, info) => {
       setTimeout(() => {
         api.sendMessage({sticker: sticker}, event.threadID);
@@ -112,3 +112,4 @@ module.exports.run = async ({ event, api, Threads, getText }) => {
   global.data.threadData.set(threadID, data);
   return api.sendMessage(`${(data["hi"] == false) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
   }
+
