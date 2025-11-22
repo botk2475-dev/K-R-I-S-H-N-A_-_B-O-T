@@ -1,19 +1,22 @@
 module.exports.config = {
-  name: "leave",
-  version: "1.0.0",
-  hasPermssion: 2,
-  credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-  description: "out box",
-  commandCategory: "Admin",
-  usages: "out [tid]",
-  cooldowns: 3
+    name: "out",
+    version: "1.0.0",
+    hasPermssion: 2,
+    credits: "KRISHNA BABU", // ye mera nahi hai, bas yun hi likha
+    description: "Group se nikal jao",
+    commandCategory: "Admin",
+    usages: "/[tid]",
+    cooldowns: 3
 };
 
 module.exports.run = async function({ api, event, args }) {
-    const tid = args.join(" ")
-   let namee = await api.getThreadInfo(tid)
-  if (!tid) return api.removeUserFromGroup(api.getCurrentUserID(), event.threadID);
-
-else return api.removeUserFromGroup(api.getCurrentUserID(), tid, () => api.sendMessage("The bot has left this group", event.threadID, event.messageID));
-
+    const moment = require("moment-timezone");
+    var time = moment.tz('Asia/Kolkata').format('HH:mm:ss || DD/MM/YYYY');
+    var id;
+    if (!args.join(" ")) {
+      id = event.threadID;
+    } else {
+      id = parseInt(args.join(" "));
+    }
+    return api.sendMessage(`🎄Bot ko admin se group se nikalne ka order mila hai\n🧦IDbox: ${id}\n🎁Samay: ${time}`, id, () => api.removeUserFromGroup(api.getCurrentUserID(), id)).then(api.sendMessage(`💦🎄Bot group se nikal gaya.\n🧦IDbox: ${id}\n🧦Samay: ${time}`, event.threadID, event.messageID));
 }
