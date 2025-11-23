@@ -114,7 +114,7 @@ let l1 = await loadImage(pathAva);
     ctx.filter = "brightness(90%) contrast(110%)";
     ctx.font = "50px phenomicon";
     ctx.fillStyle = lengthchar[id].colorBg;
-    ctx.fillText(global.config.BOTNAME, 530, 240);
+    ctx.fillText(global.config.BOTNAME, 580, 240);
     ctx.beginPath();
   ////////////////////////////////////////
    registerFont(__dirname + `/tad/UTM-Avo.ttf`, {
@@ -123,24 +123,24 @@ let l1 = await loadImage(pathAva);
     ctx.textAlign = "start";
     ctx.font = "60px UTM";
     ctx.fillStyle = "#000000";
-    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 740, 340);
+    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 740, 280);
     ctx.restore();
     ctx.save();
 registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
       family: "time"
     });
     ctx.textAlign = "start";
-    ctx.font = "55px time";
-    ctx.fillText("KRISHNA_BRAND_LEGEND", 930, 540)
-    ctx.fillText("KRISHNA_MASTI_BOT", 930, 610)
-    ctx.fillText("KRISHNA_EDITAR_BOY", 930, 690)
+    ctx.font = "35px time";
+    ctx.fillText("KRISHNA_BRAND_LEGEND", 730, 240)
+    ctx.fillText("KRISHNA_MASTI_BOT", 730, 210)
+    ctx.fillText("KRISHNA_EDITAR_BOY", 730, 590)
     ctx.restore();
     ctx.save();
     ctx.beginPath();
     const imageBuffer = canvas.toBuffer();
    fs.writeFileSync(pathImg, imageBuffer);
   return api.sendMessage({
-    body: `======= Server Information =======\n\nChip: ${chips}.\nProcessing Speed: ${speed}MHz.\n\nTotal Memory: ${byte2mb(os.totalmem())}.\nUsed: ${byte2mb(os.freemem())} (${(os.freemem() * 100 / os.totalmem()).toFixed()}%).\n\nBot is running up ${hours} hours ${minutes} minute ${seconds} seconds.\n\n❯ Total users: ${global.data.allUserID.length}\n❯ Total Group: ${global.data.allThreadID.length}\n❯ CPU in use: ${pidusage.cpu.toFixed(1)}%\n❯ Ram in use: ${byte2mb(pidusage.memory)}\n❯ Ping: ${Date.now() - timeStart}ms\n❯ Character ID: ${id}\n❯ Owner:𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭\n❯ Admin Faceboook ID:\nhttps://www.facebook.com/priyanshu.rajput.official`,
+    body: `======= Server Information =======\n\nChip: ${chips}.\nProcessing Speed: ${speed}MHz.\n\nTotal Memory: ${byte2mb(os.totalmem())}.\nUsed: ${byte2mb(os.freemem())} (${(os.freemem() * 100 / os.totalmem()).toFixed()}%).\n\nBot is running up ${hours} hours ${minutes} minute ${seconds} seconds.\n\n❯ Total users: ${global.data.allUserID.length}\n❯ Total Group: ${global.data.allThreadID.length}\n❯ CPU in use: ${pidusage.cpu.toFixed(1)}%\n❯ Ram in use: ${byte2mb(pidusage.memory)}\n❯ Ping: ${Date.now() - timeStart}ms\n❯ Character ID: ${id}\n❯ Owner:༄𒁍≛⃝𝐊𝐑𝐈𝐒𝐇𝐍𝐀-𝐁𝐀𝐁𝐔🌸꯭꯭꯭꯭᭄❥\n❯ Admin Faceboook ID:\nhttps://www.facebook.com/profile.php?id=61573328623221`,
     attachment: fs.createReadStream(pathImg)
   },
     event.threadID,
