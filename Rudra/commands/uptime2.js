@@ -104,7 +104,7 @@ let l1 = await loadImage(pathAva);
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = lengthchar[id].colorBg;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(l1, -200, -200, 1200, 1200);
+    ctx.drawImage(l1, -200, -200, 1100, 1100);
     ctx.drawImage(a, 0, 0, canvas.width, canvas.height);
      registerFont(__dirname + `/tad/phenomicon.ttf`, {
       family: "phenomicon"
@@ -114,16 +114,16 @@ let l1 = await loadImage(pathAva);
     ctx.filter = "brightness(90%) contrast(110%)";
     ctx.font = "50px phenomicon";
     ctx.fillStyle = lengthchar[id].colorBg;
-    ctx.fillText(global.config.BOTNAME, 480, 240);
+    ctx.fillText(global.config.BOTNAME, 530, 240);
     ctx.beginPath();
   ////////////////////////////////////////
    registerFont(__dirname + `/tad/UTM-Avo.ttf`, {
       family: "UTM"
     });
     ctx.textAlign = "start";
-    ctx.font = "70px UTM";
+    ctx.font = "60px UTM";
     ctx.fillStyle = "#000000";
-    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 880, 340);
+    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 740, 340);
     ctx.restore();
     ctx.save();
 registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
@@ -131,9 +131,9 @@ registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
     });
     ctx.textAlign = "start";
     ctx.font = "55px time";
-    ctx.fillText("pri_yanshu12", 930, 540)
-    ctx.fillText("priyanshu192", 930, 610)
-    ctx.fillText("priyanshu.rajput.official", 930, 690)
+    ctx.fillText("KRISHNA_BRAND_LEGEND", 930, 540)
+    ctx.fillText("KRISHNA_MASTI_BOT", 930, 610)
+    ctx.fillText("KRISHNA_EDITAR_BOY", 930, 690)
     ctx.restore();
     ctx.save();
     ctx.beginPath();
