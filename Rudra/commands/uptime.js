@@ -95,16 +95,16 @@ let l1 = await loadImage(pathAva);
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
     ctx.drawImage(a, 0, 0, canvas.width, canvas.height);
-  ctx.drawImage(l1, 800, -160, 850, 850);
+  ctx.drawImage(l1, 800, -160, 750, 750);
      registerFont(__dirname + `/tad/phenomicon.ttf`, {
       family: "phenomicon"
     });
     ctx.textAlign = "start";
     ctx.strokeStyle = lengthchar[id - 1].colorBg;
     ctx.filter = "brightness(90%) contrast(110%)";
-    ctx.font = "130px phenomicon";
+    ctx.font = "145px phenomicon";
     ctx.fillStyle = lengthchar[id].colorBg;
-    ctx.fillText("UPTIME ROBOT", 105, 180);
+    ctx.fillText("UPTIME ROBOT", 125, 165);
     ctx.beginPath();
   ////////////////////////////////////////
    registerFont(__dirname + `/tad/UTM-Avo.ttf`, {
@@ -123,7 +123,7 @@ registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
     ctx.font = "45px time";
     ctx.fillText("@" + "𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗘𝗗𝗜𝗧𝗔𝗥_𝗕𝗢𝗬", 200, 450)
     ctx.fillText("@" + "𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗕𝗥𝗔𝗡𝗗_𝗟𝗘𝗚𝗘𝗡𝗗", 200, 410)
-    ctx.fillText("@" + "༄𒁍≛⃝𝐊𝐑𝐈𝐒𝐇𝐍𝐀-𝐁𝐀𝐁𝐔🌸꯭꯭꯭꯭᭄❥", 430, 625)
+    ctx.fillText("@" + "𝐊𝐑𝐈𝐒𝐇𝐍𝐀-𝐁𝐀𝐁𝐔", 330, 625)
     ctx.restore();
     ctx.save();
     ctx.beginPath();
