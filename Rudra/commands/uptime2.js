@@ -112,9 +112,9 @@ let l1 = await loadImage(pathAva);
     ctx.textAlign = "start";
     ctx.strokeStyle = lengthchar[id].colorBg;
     ctx.filter = "brightness(90%) contrast(110%)";
-    ctx.font = "70px phenomicon";
+    ctx.font = "50px phenomicon";
     ctx.fillStyle = lengthchar[id].colorBg;
-    ctx.fillText(global.config.BOTNAME, 435, 280);
+    ctx.fillText(global.config.BOTNAME, 480, 240);
     ctx.beginPath();
   ////////////////////////////////////////
    registerFont(__dirname + `/tad/UTM-Avo.ttf`, {
@@ -123,7 +123,7 @@ let l1 = await loadImage(pathAva);
     ctx.textAlign = "start";
     ctx.font = "70px UTM";
     ctx.fillStyle = "#000000";
-    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 980, 440);
+    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 880, 340);
     ctx.restore();
     ctx.save();
 registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
