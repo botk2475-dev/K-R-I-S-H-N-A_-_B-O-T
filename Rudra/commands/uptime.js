@@ -95,7 +95,7 @@ let l1 = await loadImage(pathAva);
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
     ctx.drawImage(a, 0, 0, canvas.width, canvas.height);
-  ctx.drawImage(l1, 800, -160, 1100, 1100);
+  ctx.drawImage(l1, 800, -160, 950, 950);
      registerFont(__dirname + `/tad/phenomicon.ttf`, {
       family: "phenomicon"
     });
@@ -104,16 +104,16 @@ let l1 = await loadImage(pathAva);
     ctx.filter = "brightness(90%) contrast(110%)";
     ctx.font = "130px phenomicon";
     ctx.fillStyle = lengthchar[id].colorBg;
-    ctx.fillText("UPTIME ROBOT", 95, 340);
+    ctx.fillText("UPTIME ROBOT", 95, 240);
     ctx.beginPath();
   ////////////////////////////////////////
    registerFont(__dirname + `/tad/UTM-Avo.ttf`, {
       family: "UTM"
     });
     ctx.textAlign = "start";
-    ctx.font = "70px UTM";
+    ctx.font = "90px UTM";
     ctx.fillStyle = "#fdfdfd";
-    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 180, 440);
+    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 180, 340);
     ctx.restore();
     ctx.save();
 registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
@@ -121,9 +121,9 @@ registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
     });
     ctx.textAlign = "start";
     ctx.font = "45px time";
-    ctx.fillText("@" + "𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗕𝗔𝗕𝗨_𝗢𝗙𝗙𝗜𝗖𝗜𝗔𝗟", 250, 515)
-    ctx.fillText("@" + "𝐒𝐇𝐘𝐀𝐌_𝐃𝐈𝐖𝐀𝐍𝐈", 250, 575)
-    ctx.fillText("@" + "DVFB.VietLe.pro", 405, 750)
+    ctx.fillText("@" + "𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗘𝗗𝗜𝗧𝗔𝗥_𝗕𝗢𝗬", 200, 465)
+    ctx.fillText("@" + "𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗕𝗥𝗔𝗡𝗗_𝗟𝗘𝗚𝗘𝗡𝗗", 200, 425)
+    ctx.fillText("@" + "DVFB.VietLe.pro", 430, 725)
     ctx.restore();
     ctx.save();
     ctx.beginPath();
