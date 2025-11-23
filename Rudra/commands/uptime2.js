@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "uptime2",
 	version: "1.0.0",
 	hasPermssion: 1,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
+	credits: "KRISHNA-BABU",
   hide: true,
 	description: "Random images by api - uptime",
 	commandCategory: "administrators",
@@ -131,9 +131,9 @@ registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
     });
     ctx.textAlign = "start";
     ctx.font = "35px time";
-    ctx.fillText("KRISHNA_BRAND_LEGEND", 730, 420)
-    ctx.fillText("KRISHNA_MASTI_BOT", 730, 480)
-    ctx.fillText("KRISHNA_EDITAR_BOY", 730, 540)
+    ctx.fillText("𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗕𝗥𝗔𝗡𝗗_𝗟𝗘𝗚𝗘𝗡𝗗", 730, 420)
+    ctx.fillText("𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗠𝗔𝗦𝗧𝗜_𝗕𝗢𝗧", 730, 480)
+    ctx.fillText("𝗞𝗥𝗜𝗦𝗛𝗡𝗔_𝗘𝗗𝗜𝗧𝗢𝗥_𝗕𝗢𝗬", 730, 540)
     ctx.restore();
     ctx.save();
     ctx.beginPath();
