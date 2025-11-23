@@ -123,7 +123,7 @@ let l1 = await loadImage(pathAva);
     ctx.textAlign = "start";
     ctx.font = "60px UTM";
     ctx.fillStyle = "#000000";
-    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 740, 300);
+    ctx.fillText(`${z_1} : ${x_1} : ${y_1} `, 740, 320);
     ctx.restore();
     ctx.save();
 registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
@@ -131,9 +131,9 @@ registerFont(__dirname + `/tad/CaviarDreams.ttf`, {
     });
     ctx.textAlign = "start";
     ctx.font = "35px time";
-    ctx.fillText("KRISHNA_BRAND_LEGEND", 730, 400)
+    ctx.fillText("KRISHNA_BRAND_LEGEND", 730, 420)
     ctx.fillText("KRISHNA_MASTI_BOT", 730, 480)
-    ctx.fillText("KRISHNA_EDITAR_BOY", 730, 570)
+    ctx.fillText("KRISHNA_EDITAR_BOY", 730, 540)
     ctx.restore();
     ctx.save();
     ctx.beginPath();
