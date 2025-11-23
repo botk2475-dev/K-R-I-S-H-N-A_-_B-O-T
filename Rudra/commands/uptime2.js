@@ -112,9 +112,9 @@ let l1 = await loadImage(pathAva);
     ctx.textAlign = "start";
     ctx.strokeStyle = lengthchar[id].colorBg;
     ctx.filter = "brightness(90%) contrast(110%)";
-    ctx.font = "130px phenomicon";
+    ctx.font = "110px phenomicon";
     ctx.fillStyle = lengthchar[id].colorBg;
-    ctx.fillText(global.config.BOTNAME, 635, 240);
+    ctx.fillText(global.config.BOTNAME, 535, 280);
     ctx.beginPath();
   ////////////////////////////////////////
    registerFont(__dirname + `/tad/UTM-Avo.ttf`, {
