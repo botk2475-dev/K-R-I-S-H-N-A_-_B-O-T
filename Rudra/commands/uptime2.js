@@ -88,7 +88,7 @@ var time = process.uptime(),
     const Canvas = require('canvas');
     let pathImg = __dirname + `/tad/${id}.png`;
     let pathAva = __dirname + `/tad/${event.senderID}.png`;
-    let background = (await axios.get(encodeURI(`https://imgur.com/x5JpRYu.png`), { responseType: "arraybuffer" })).data;
+    let background = (await axios.get(encodeURI(`https://i.postimg.cc/d0Z83SKB/x5Jp-RYu.png`), { responseType: "arraybuffer" })).data;
     fs.writeFileSync(pathImg, Buffer.from(background, "utf-8"));
     let ava = (await axios.get(encodeURI(`${lengthchar[id].imgAnime}`), { responseType: "arraybuffer" })).data;
     fs.writeFileSync(pathAva, Buffer.from(ava, "utf-8"));
